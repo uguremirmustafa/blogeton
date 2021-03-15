@@ -14,7 +14,7 @@ function Articles() {
   console.log(articles);
   return (
     <div>
-      <h2>articles</h2>
+      <h2 style={{ margin: '10px 0' }}>articles</h2>
 
       {articles &&
         articles.map((i) => {
@@ -26,7 +26,7 @@ function Articles() {
           );
         })}
       {!articles &&
-        [1, 2, 3, 4, 5, 1, 1, 1, 11].map((i) => <SkeletonArticle key={i} theme="light" />)}
+        [1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => <SkeletonArticle key={i} theme="light" />)}
     </div>
   );
 }

@@ -12,7 +12,7 @@ function Users() {
   }, []);
   return (
     <div>
-      <h2>users</h2>
+      <h2 style={{ margin: '10px 0' }}>user</h2>
       {profile && (
         <div>
           <h3>{profile.username}</h3>
