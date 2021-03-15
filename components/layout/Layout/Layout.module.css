@@ -1,0 +1,10 @@
+.body {
+  background: #fff;
+  min-height: 100vh;
+}
+.content {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}

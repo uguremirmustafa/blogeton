@@ -2,8 +2,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -13,4 +13,85 @@ a {
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.skeleton {
+  background-color: #ddd;
+  border-radius: 0.2rem;
+  margin: 0.4rem 0;
+}
+.skeleton.title {
+  width: 40%;
+  height: 20px;
+  margin-bottom: 0.6rem;
+}
+.skeleton.text {
+  width: 100%;
+  height: 16px;
+}
+.skeleton.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.skeleton-wrapper {
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.skeleton-profile {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  align-items: center;
+  padding: 0.5rem 0.8rem;
+}
+.skeleton-article {
+  padding: 0.5rem 0.8rem;
+}
+
+/* themes */
+.skeleton-wrapper.light {
+  background-color: #f2f2f2;
+}
+.skeleton-wrapper.dark {
+  background-color: #444;
+}
+.skeleton-wrapper.dark .skeleton {
+  background-color: #777;
+}
+
+/* animation effects */
+.shimmer-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: loading 1.5s infinite;
+}
+.shimmer-wrapper .shimmer {
+  width: 50%;
+  height: 100%;
+  transform: skewX(-10deg);
+  background-image: linear-gradient(90deg, #f4f4f4, rgba(229, 229, 229, 0.3) 90px, #f4f4f4 150px);
+  box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.02);
+}
+.dark .shimmer {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(-150%);
+  }
+  50% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(150%);
+  }
 }

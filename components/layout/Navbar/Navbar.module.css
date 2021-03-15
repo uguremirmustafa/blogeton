@@ -1,0 +1,28 @@
+.navbar {
+  width: 100%;
+  background: #272822;
+}
+.inner_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+  height: 60px;
+  padding: 0 1rem;
+}
+.logo {
+  font-size: 1.5rem;
+}
+.nav_item {
+  font-weight: 700;
+  margin: 0 0.4rem;
+  text-transform: capitalize;
+}
+.featured_nav_item {
+  background: #f87171;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  font-weight: 700;
+  color: white;
+}
